@@ -34,6 +34,7 @@ export function updateProfile(id, updatedData) {
 }
 
 export function deleteProfile(id) {
+  console.log("id",id);
   return client
     .db("project2")
     .collection("profile")

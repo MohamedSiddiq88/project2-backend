@@ -43,6 +43,7 @@ router.post("/create", async (req, res) => {
 router.put("/update/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    console.log("id",id);
     const updatedProfileData = req.body;
     if (!updatedProfileData) {
       res.status(400).json({ error: "No updated profile data provided" });
