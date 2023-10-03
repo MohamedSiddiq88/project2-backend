@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 import { usersRouter } from "./Routers/users.js";
 import cors from "cors";
 import { sendMailRouter } from "./Routers/sendMail.js";
-import { profilesRouter } from "./Routers/profiles.js";
+import { gamesRouter } from "./Routers/game.js";
 
 
 // configure the envirenment
@@ -18,12 +18,10 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/",(req,res)=>{
-    res.send("Welocome to Project2")
+    res.send("Welocome to Project3")
 })
-// app.use("/menu",menuRouter);
 app.use("/users",usersRouter)   
-// app.use("/admin",adminRouter)
-app.use("/profile",profilesRouter)
+app.use("/game",gamesRouter)
 app.get("/mail",sendMailRouter)
 
 

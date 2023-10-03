@@ -41,7 +41,7 @@ router.post("/login",async(req,res)=>{
             return res.status(400).json({data:"invalid"})
         }
         const token =generateJwtToken(user._id)
-        res.status(200).json({data:token,name:user.name})
+        res.status(200).json({data:token,name:user.name,id:user._id,email:user.email,})
 
 
     } catch (error) {
